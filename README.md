@@ -51,7 +51,7 @@ Effects are declared inside the component so they have access to it's props and 
 
 __Using the effect hook similarly to componentDidMount:__
 ```
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Example() {
     const [count, setCount] = useState(0);
@@ -69,7 +69,7 @@ the `[]` at the end of useEffect means it will only re-render one time on compon
 
 __Using the effect hook to re-render only when a specific state is changed:__
 ```
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Example() {
     const [count, setCount] = useState(0);
@@ -87,7 +87,7 @@ the `[count]` at the end of useEffect means it will re-render anytime the state 
 
 __Using the effect hook to re-render when any lifecycle change happens:__
 ```
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Example() {
     const [count, setCount] = useState(0);
